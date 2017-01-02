@@ -5,12 +5,13 @@ package thread;
  */
 public class SingleTon {
     private static SingleTon singleTon;
-    private SingleTon(){
+
+    private SingleTon() {
 
     }
 
-    public static SingleTon getInstance(){
-        if(singleTon == null){
+    public static SingleTon getInstance() {
+        if (singleTon == null) {
             singleTon = new SingleTon();
         }
         return singleTon;

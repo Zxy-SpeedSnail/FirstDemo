@@ -10,7 +10,7 @@ public class testVector {
         Vector vector = new Vector();
         vector.add("09");
         vector.add("3");
-        StringBuffer s =new StringBuffer("das");
+        StringBuffer s = new StringBuffer("das");
         //类ArrayList
         System.out.println(vector.toString());
 

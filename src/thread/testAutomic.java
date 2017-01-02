@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class testAutomic {
     public static AtomicInteger integer = new AtomicInteger();
 
-    public static void main(String[] args) {
+    public static void main( String[] args) {
         integer.incrementAndGet();
     }
 }

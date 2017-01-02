@@ -8,7 +8,8 @@ import java.util.concurrent.*;
  */
 public class testCallable implements Callable {
     private int id;
-    public testCallable(int id){
+
+    public testCallable(int id) {
         this.id = id;
     }
 
@@ -16,7 +17,7 @@ public class testCallable implements Callable {
     @Override
     public String call() throws Exception {
 
-        return "result of TaskWithResult "+id;
+        return "result of TaskWithResult " + id;
     }
 
     public static void main(String[] args) {
@@ -26,14 +27,14 @@ public class testCallable implements Callable {
             Future<String> fu = executorService.submit(new testCallable(i));
             results.add(fu);
         }
-        for(Future<String> fs : results){
+        for (Future<String> fs : results) {
             try {
                 System.out.println(fs.get());
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
                 e.printStackTrace();
-            }finally{
+            } finally {
                 // 不关闭，任务不结束
                 executorService.shutdown();
             }
