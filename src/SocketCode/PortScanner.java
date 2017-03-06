@@ -16,7 +16,7 @@ public class PortScanner {
                 System.out.println("this is a server on port "+port);
 
             } catch (IOException e) {
-                System.out.println("can not connect port "+port);
+                System.out.println("can not "+port);
             }finally {
                 if(socket!=null){
                     try {
