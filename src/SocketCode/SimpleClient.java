@@ -10,6 +10,7 @@ public class SimpleClient {
     public static void main(String[] args) throws IOException {
         for(int i = 1;i<=3;i++){
             Socket socket = new Socket("localhost",8000);
+            System.out.println(socket.getInetAddress()+" "+socket.getLocalAddress());
             System.out.println("第"+i+"次链接成功");
         }
     }

@@ -9,6 +9,7 @@ import java.net.ServerSocket;
 public class SimpleServer {
     public static void main(String[] args) throws IOException, InterruptedException {
         ServerSocket serverSocket =new ServerSocket(8000,2);
-        Thread.sleep(3600);
+        System.out.println(serverSocket.getInetAddress()+" "+serverSocket.getLocalPort());
+        Thread.sleep(36000);
     }
 }
