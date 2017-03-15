@@ -27,7 +27,7 @@ public class SimpleHttpServer {
     }
 
     public void service() {
-        while (true) {
+        while (true){
             SocketChannel socketChannel = null;
             try {
                 socketChannel = serverSocketChannel.accept();
@@ -73,10 +73,10 @@ public class SimpleHttpServer {
                 FileInputStream in;
                 //获得HTTP请求的第一行
                 String firstLineOfRequest = request.substring(0, request.indexOf("\r\n"));
-                if (firstLineOfRequest.indexOf("login.htm") != -1)
-                    in = new FileInputStream("root/login.htm");
+                if (firstLineOfRequest.indexOf("login.html") != -1)
+                    in = new FileInputStream("/Users/zhouxueyuan/IdeaProjects/FirstDemo/src/SocketCode/Httpserv/login.html");
                 else
-                    in = new FileInputStream("root/hello.htm");
+                    in = new FileInputStream("/Users/zhouxueyuan/IdeaProjects/FirstDemo/src/SocketCode/Httpserv/hello.html");
 
                 FileChannel fileChannel = in.getChannel();
                 fileChannel.transferTo(0, fileChannel.size(), socketChannel);
