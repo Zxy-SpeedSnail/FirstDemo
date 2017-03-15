@@ -5,9 +5,7 @@ package SocketCode.nio;
  */
 import java.net.*;
 import java.nio.channels.*;
-import java.nio.*;
 import java.io.*;
-import java.nio.charset.*;
 import java.util.*;
 
 class Target {  //表示一项任务
