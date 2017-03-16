@@ -63,7 +63,9 @@ public class SimpleHttpServer {
                 socketChannel.read(buffer);
                 buffer.flip();
                 String request = decode(buffer);
+                System.out.println("---------------");
                 System.out.print(request);  //打印HTTP请求
+                System.out.println("---------------");
 
                 //输出HTTP响应结果
                 StringBuffer sb = new StringBuffer("HTTP/1.1 200 OK\r\n");
